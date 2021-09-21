@@ -1,3 +1,4 @@
+import numpy as np
 board=b=np.array([[0,0,0],
                   [0,0,0],
                   [0,0,0]])
