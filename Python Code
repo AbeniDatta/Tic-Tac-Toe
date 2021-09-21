@@ -1,0 +1,48 @@
+board=b=np.array([[0,0,0],
+                  [0,0,0],
+                  [0,0,0]])
+print("Empty board",b)
+win=0
+while win==0:
+  m=int(input("Player 1, enter your prefered row:"))
+  l=int(input("Player 1, enter your prefered column:"))
+  b[m-1,l-1]=1
+  print(b)
+  if b[0,0]==b[1,1]==b[2,2]!=0:
+    win=1
+    print(b[0,0],"won the game!")
+    break
+  elif b[0,2]==b[1,1]==b[2,0]!=0:
+    win=1
+    print(b[0,2],"won the game!")
+    break
+  elif b[0,0]==b[1,0]==b[2,0]!=0:
+    win=1
+    print(b[0,0],"won the game!")
+    break
+  elif b[0,1]==b[1,1]==b[2,1]!=0:
+    win=1
+    print(b[0,1],"won the game!")
+    break
+  elif b[0,2]==b[1,2]==b[2,2]!=0:
+    win=1
+    print(b[0,2],"won the game!")
+    break
+  elif b[0,0]==b[0,1]==b[0,2]!=0:
+    win=1
+    print(b[0,0],"won the game!")
+    break
+  elif b[1,0]==b[1,1]==b[1,2]!=0:
+    win=1
+    print(b[1,0],"won the game!")
+    break
+  elif b[2,0]==b[2,1]==b[2,2]!=0:
+    win=1
+    print(b[2,0],"won the game!")
+    break
+  else:
+    win=0
+  n=int(input("Player 2, enter your prefered row:"))
+  p=int(input("Player 2, enter your prefered column:"))
+  b[n-1,p-1]=2
+  print(b)
