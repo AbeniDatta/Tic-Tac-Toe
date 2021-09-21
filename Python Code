@@ -47,3 +47,37 @@ while win==0:
   p=int(input("Player 2, enter your prefered column:"))
   b[n-1,p-1]=2
   print(b)
+  if b[0,0]==b[1,1]==b[2,2]!=0:
+    win=1
+    print(b[0,0],"won the game!")
+    break
+  elif b[0,2]==b[1,1]==b[2,0]!=0:
+    win=1
+    print(b[0,2],"won the game!")
+    break
+  elif b[0,0]==b[1,0]==b[2,0]!=0:
+    win=1
+    print(b[0,0],"won the game!")
+    break
+  elif b[0,1]==b[1,1]==b[2,1]!=0:
+    win=1
+    print(b[0,1],"won the game!")
+    break
+  elif b[0,2]==b[1,2]==b[2,2]!=0:
+    win=1
+    print(b[0,2],"won the game!")
+    break
+  elif b[0,0]==b[0,1]==b[0,2]!=0:
+    win=1
+    print(b[0,0],"won the game!")
+    break
+  elif b[1,0]==b[1,1]==b[1,2]!=0:
+    win=1
+    print(b[1,0],"won the game!")
+    break
+  elif b[2,0]==b[2,1]==b[2,2]!=0:
+    win=1
+    print(b[2,0],"won the game!")
+    break
+  else:
+    win=0
